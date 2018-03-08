@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  web:
+    build:
+      context: ./
+    volumes:
+      - ./:/code
+    ports:
+      - "3000:3000"
