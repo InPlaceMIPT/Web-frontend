@@ -1,7 +1,7 @@
-FROM node
-RUN npm install create-react-app react react-scripts mini-signals react-dom
+FROM node:carbon
 RUN mkdir /code
 COPY ./ /code
 WORKDIR /code/inplace
+RUN yarn install
 EXPOSE 3000
-ENTRYPOINT npm start
+ENTRYPOINT yarn start
