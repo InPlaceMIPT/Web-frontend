@@ -1,6 +1,5 @@
 FROM node:carbon
 RUN mkdir /code
-WORKDIR /code
-RUN yarn init --yes
-RUN yarn add create-react-app
+COPY ./ /code
+WORKDIR /code/inplace
 ENTRYPOINT bash

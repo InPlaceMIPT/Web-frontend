@@ -8,3 +8,10 @@ services:
       - ./:/code
     ports:
       - "3000:3000"
+  web_init:
+    build:
+      context: ./
+      dockerfile: Docker_init
+    volumes:
+      - ./:/code
+    tty: true
